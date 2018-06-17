@@ -36,7 +36,7 @@ int main() {
             stu[total].locationNum = i + 1; // 考场序号从1开始
             total++;
         }
-
+        
         sort(stu + start, stu + start + testeeTotal, cmp);
         stu[start].locationRank = 1;
         int rank = 2;
