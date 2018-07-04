@@ -14,6 +14,18 @@ LL binaryPower(LL a, int n, LL m) {
         return mul * mul % m;
     }
 } 
+// 迭代 利用二进制
+LL iterator(LL a, int n, LL m) {
+    LL ans = 1;
+    while (n > 0) {
+        if (n & 1) {
+            ans = ans * a % m;
+        }
+        a = a * a % m;
+        n >>= 1;
+    }
+    return ans;
+}
 
 int main() {
     LL a, m;
